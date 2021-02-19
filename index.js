@@ -22,7 +22,6 @@ mongoose.connect(dbUrl, {
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));//This file will run every time So there is no need to connect with mongodb further
 db.once('open', function() {
-console.log('we are connected!');
 });
 
 const app = express();
@@ -52,7 +51,4 @@ if (['production','ci'].includes(process.env.NODE_ENV)) {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(PORT)
-  console.log(`Listening on port`, PORT);
-});
+app.listen(PORT);
