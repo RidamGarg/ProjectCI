@@ -10,7 +10,7 @@ require('./models/Blog');
 require('./services/passport');
 require('./middlewares/cache');//Insert this file here as mongoose is connected here
 const dbUrl = keys.mongoURI;
-mongoose.Promise = global.Promise;
+
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
