@@ -14,6 +14,4 @@ mongoose.connect(dbUrl, {
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));//This file will run every time So there is no need to connect with mongodb further
-db.once('open', function() {
-console.log('we are connected!');
-});
+db.once('open', function() {});
