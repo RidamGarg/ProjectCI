@@ -1,4 +1,3 @@
-const { TestScheduler } = require('jest');
 const customPage = require('./helpers/page');
 let Page;
 beforeEach(async() => {
