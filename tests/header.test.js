@@ -3,7 +3,7 @@ const customPage = require('./helpers/page')
 let Page;
 beforeEach(async() => {
     Page = await customPage.buildPage() ;
-    await Page.goto('http://localhost:3000/')
+    await Page.goto('http://localhost:3000')
 });
 afterEach(async()=>{
   await Page.close();
