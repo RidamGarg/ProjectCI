@@ -1,19 +1,21 @@
 const customPage = require('./helpers/page')
 //require('../middlewares/login')
 let Page;
+let url;
 beforeEach(async() => {
     Page = await customPage.buildPage() ;
-    const url = await Page.url();
-    console.log(url);
+     url = await Page.url();
+    
     await Page.goto('https://localhost:3000')
 });
 afterEach(async()=>{
   await Page.close();
 })
-// test('adds 1 + 2 to equal 3', () => {
-// const sum = 3;
-// expect(3).toEqual(3);
-// });
+test('adds 1 + 2 to equal 3', () => {
+const sum = 3;
+console.log(url);
+expect(3).toEqual(3);
+});
 test('the header has the correct text',async()=>{
 const text = await Page.getContentsOf('a.brand-logo');//innerHtml also return only text but it can set html.
 //the page.func()  in this func goes into chromium as string then it converted in function there and do some work there and then sends the response here in nodejs
