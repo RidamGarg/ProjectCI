@@ -3,6 +3,8 @@ const customPage = require('./helpers/page')
 let Page;
 beforeEach(async() => {
     Page = await customPage.buildPage() ;
+    const url = await Page.url();
+    console.log(url);
     await Page.goto('https://localhost:3000')
 });
 afterEach(async()=>{
