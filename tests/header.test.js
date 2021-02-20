@@ -4,7 +4,7 @@ let Page;
 let url;
 beforeEach(async() => {
     Page = await customPage.buildPage() ;
-    await Page.goto('localhost:3000')
+    await Page.goto('http://localhost:3000/')
 });
 afterEach(async()=>{
   await Page.close();

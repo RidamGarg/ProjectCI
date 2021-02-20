@@ -34,7 +34,7 @@ async getContentsOf(selector){
     name: 'session.sig',
     value: sessionSig
   })
-  await this.page.goto('localhost:3000/blogs') //it is necessary so that all the code and page render(perform something) again
+  await this.page.goto('http://localhost:3000/blogs') //it is necessary so that all the code and page render(perform something) again
     }
   async get(path){
     return this.page.evaluate((_path)=>{
